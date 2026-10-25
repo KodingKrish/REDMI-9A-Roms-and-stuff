@@ -3,7 +3,7 @@
 cd /d "%~dp0"
 
 echo ==========================================
-echo   Git Auto-Push Automation Script
+echo    Git Auto-Push Automation Script
 echo ==========================================
 
 :: 1. Check current status
@@ -24,11 +24,27 @@ set COMMIT_MSG=Auto-update: %TIMESTAMP%
 echo Committing changes...
 git commit -m "%COMMIT_MSG%"
 
-:: 5. Push to GitHub
+:: 5. Pull latest remote changes to prevent rejection errors
+echo Syncing with remote repository...
+git pull origin main --rebase
+if %ERRORLEVEL% NEQ 0 (
+    echo.
+    echo [ERROR] Git pull failed. Please resolve merge conflicts manually.
+    goto :end
+)
+
+:: 6. Push to GitHub
 echo Uploading to GitHub...
 git push origin main
+if %ERRORLEVEL% NEQ 0 (
+    echo.
+    echo [ERROR] Git push failed.
+    goto :end
+)
 
 echo ==========================================
-echo   Execution completed successfully!
+echo    Execution completed successfully!
 echo ==========================================
+
+:end
 pause

@@ -5,6 +5,10 @@ you guys are NOT gonna suffer the same bs i did
 
 python mtk.py e para,misc,metadata,userdata,cache
 
+Important Related Stuff:
+https://xdaforums.com/t/rom-15-14-android-15-or-14-for-redmi-9a-yaap-axion.4723933/
+
+
 # Redmi 9A (dandelion) ROMs, GSIs, & Customization Guide
 
 Welcome to the collection of resources, Custom ROM links, GSIs (Generic System Images), TWRP/OrangeFox recoveries, kernels, and tweaking guides for the Xiaomi Redmi 9A / 9AT / 9i (codenames: `dandelion`, `angelica`, `cattail`).

@@ -3,7 +3,7 @@ you guys are NOT gonna suffer the same bs i did
 
 # Check the releases tab, not the files
 
-
+python mtk.py e para,misc,metadata,userdata,cache
 
 # Redmi 9A (dandelion) ROMs, GSIs, & Customization Guide
 
